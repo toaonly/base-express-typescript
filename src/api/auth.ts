@@ -1,6 +1,12 @@
-import { Router, RouterOptions } from 'express'
+import { Router } from 'express'
 
 const router = Router()
+
+router.get('/test', (req, res) => {
+  res
+    .status(200)
+    .json({ result: true })
+})
 
 router.post('/signin', (req, res) => {
   const { email, password } = req.body

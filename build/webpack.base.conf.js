@@ -2,19 +2,24 @@ const path = require('path')
 const WebpackShellPlugin = require('webpack-shell-plugin')
 
 module.exports = {
-  mode: 'development',
-
   target: 'node',
+
+  node: {
+    __dirname: true
+  },
+
+  context: path.resolve(__dirname, '../'),
 
   entry: './src/app.ts',
 
   output: {
+    publicPath: '../',
     filename: 'app.js',
     path: path.resolve(__dirname, '../dist')
   },
 
   resolve: {
-    extensions: [ '.ts', '.js' ]
+    extensions: ['.ts', '.js']
   },
 
   module: {
@@ -29,8 +34,8 @@ module.exports = {
   },
 
   plugins: [
-    new WebpackShellPlugin({
-      onBuildEnd: [ 'npm run run:dev' ]
-    })
+    // new WebpackShellPlugin({
+    //   onBuildEnd: ['npm run run']
+    // })
   ]
 }
