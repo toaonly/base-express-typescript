@@ -8,7 +8,7 @@
     "build:dev": "webpack --config build/webpack.dev.conf.js --mode=development",
     "watch:prod": "webpack --config build/webpack.prod.conf.js -w --mode=production",
     "watch:dev": "webpack --config build/webpack.dev.conf.js -w --mode=development",
-    "start": "nodemon dist/app -w dist",
+    "start": "node dist/app",
     "start:prod": "concurrently \"npm run watch:prod\" \"npm run run\"",
     "start:dev": "concurrently \"npm run watch:dev\" \"npm run run\"",
     "run": "nodemon dist/app -w dist"
