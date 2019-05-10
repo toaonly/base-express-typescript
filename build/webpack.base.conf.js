@@ -1,4 +1,5 @@
 const path = require('path')
+const WebpackShellPlugin = require('webpack-shell-plugin')
 
 module.exports = {
   target: 'node',
@@ -9,7 +10,7 @@ module.exports = {
 
   context: path.resolve(__dirname, '../'),
 
-  entry: './src/app.ts',
+  entry: './bin/www.ts',
 
   output: {
     publicPath: '../',
@@ -33,6 +34,8 @@ module.exports = {
   },
 
   plugins: [
-    
+    new WebpackShellPlugin({
+      onBuildEnd: ['npm start']
+    })
   ]
 }
