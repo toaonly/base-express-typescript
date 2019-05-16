@@ -1,14 +1,15 @@
-const base = require('./webpack.base.conf')
+const path = require('path')
 const dotenv = require('dotenv')
-const Dotenv = require('dotenv-webpack')
+const WebpackDotenv = require('dotenv-webpack')
+const base = require('./webpack.base.conf')
 
-const envPath = './.env'
+const envPath = path.join(__dirname, '../.env')
 
 dotenv.config({
   path: envPath
 })
 
 base.mode = process.env.NODE_ENV
-base.plugins.push(new Dotenv({ path: envPath }))
+base.plugins.push(new WebpackDotenv({ path: envPath }))
 
 module.exports = base

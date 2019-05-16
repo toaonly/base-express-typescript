@@ -9,8 +9,8 @@
     "watch:prod": "webpack --config build/webpack.prod.conf.js -w --mode=production",
     "watch:dev": "webpack --config build/webpack.dev.conf.js -w --mode=development",
     "start": "node dist/app",
-    "start:prod": "concurrently \"npm run watch:prod\" \"npm run run\"",
-    "start:dev": "concurrently \"npm run watch:dev\" \"npm run run\"",
+    "start:prod": "npm run watch:prod",
+    "start:dev": "npm run watch:dev",
     "run": "nodemon dist/app -w dist",
     "test": "jest"
   },
@@ -24,7 +24,6 @@
     "@types/jest": "^24.0.12",
     "@types/node": "^12.0.0",
     "@types/supertest": "^2.0.7",
-    "concurrently": "^4.1.0",
     "dotenv": "^7.0.0",
     "dotenv-webpack": "^1.7.0",
     "jest": "^24.8.0",
