@@ -1,8 +1,7 @@
 {
   "name": "node_ts",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "nodejs base typescript",
   "scripts": {
     "build:prod": "webpack --config build/webpack.prod.conf.js --mode=production",
     "build:dev": "webpack --config build/webpack.dev.conf.js --mode=development",
