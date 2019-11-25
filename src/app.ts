@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express'
-import api from './api'
 import bodyParser from 'body-parser'
 import cors from 'cors'
+import api from './api'
 
 const app = express()
 
