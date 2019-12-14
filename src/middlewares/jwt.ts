@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 const secret = <string>process.env.JWT_SECRET
 
 export const verify = (req: Request, res: Response, next: NextFunction) => {
-  const token = <string>req.headers['authorization']
+  const token = <string>req.headers['Authorization']
   let payload
 
   try {
