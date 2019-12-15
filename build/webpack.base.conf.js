@@ -10,7 +10,7 @@ module.exports = {
 
   context: path.resolve(__dirname, '../'),
 
-  entry: './bin/www.ts',
+  entry: './bin/www',
 
   output: {
     publicPath: '../',
